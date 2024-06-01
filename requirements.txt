@@ -1,6 +1,12 @@
 openai
 langchain
+langchain_community
+langchain-ai21
 streamlit
+pandas
 python-dotenv
+jupyter
+notebook
+ai21
 PyPDF2
 -e .
