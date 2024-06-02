@@ -1,4 +1,3 @@
-openai
 langchain
 langchain_community
 langchain-ai21
