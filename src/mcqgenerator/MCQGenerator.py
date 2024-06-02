@@ -1,12 +1,10 @@
 import os
 from dotenv import load_dotenv
-import github_secrets.config
 from langchain_ai21 import ChatAI21
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
 from mcqgenerator.logger import logging
-import github_secrets
 
 
 # load the env variables from .env file if available

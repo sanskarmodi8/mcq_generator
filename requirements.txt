@@ -7,6 +7,5 @@ python-dotenv
 jupyter
 notebook
 ai21
-github-secrets
 PyPDF2
 -e .
