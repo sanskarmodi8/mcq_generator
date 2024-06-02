@@ -1,4 +1,4 @@
-name: Configure Ai21 Api Key
+name: Set Environment Variable
 
 on:
   push:
@@ -6,13 +6,12 @@ on:
       - main
 
 jobs:
-  run-script:
+  set-secret:
     runs-on: ubuntu-latest
 
     steps:
     - name: Check out repository
       uses: actions/checkout@v2
 
-    - name: set api key as env variable
-      env:
-        API_KEY: ${{ secrets.AI21_API_KEY }}
+    - name: Set AI21_API_KEY environment variable
+      run: echo "AI21_API_KEY=${{ secrets.AI21_API_KEY }}" >> $GITHUB_ENV
