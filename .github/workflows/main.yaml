@@ -1,0 +1,17 @@
+name: Set Environment Variable
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  set-secret:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set AI21_API_KEY environment variable
+      run: echo "AI21_API_KEY=${{ secrets.AI21_API_KEY }}" >> $GITHUB_ENV
