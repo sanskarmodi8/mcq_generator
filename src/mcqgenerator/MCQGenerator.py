@@ -1,11 +1,12 @@
 import os
 from dotenv import load_dotenv
+import github_secrets.config
 from langchain_ai21 import ChatAI21
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
 from mcqgenerator.logger import logging
-import secrets
+import github_secrets
 
 # load the env variables from .env file if available
 # load_dotenv()
@@ -18,8 +19,7 @@ import secrets
 
 # os.environ["AI21_API_KEY"] = ai21_api_key  # set the env var explicitly
 
-os.environ["AI21_API_KEY"] = secrets.get_secret("AI21_API_KEY")
-print(secrets.get_secret("AI21_API_KEY"))
+os.environ["AI21_API_KEY"] = github_secrets.config.RepositorySecrets.get_secret("AI21_API_KEY", "sanskarmodi8/mcq_generator")
 if not os.getenv("AI21_API_KEY"):
     raise ValueError("AI21_API_KEY environment variable is not set through secrets")
 
