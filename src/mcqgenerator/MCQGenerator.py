@@ -8,7 +8,7 @@ from mcqgenerator.logger import logging
 
 
 # load the env variables from .env file if available
-# load_dotenv()
+load_dotenv()
 
 # set the environment variable
 ai21_api_key = os.getenv("AI21_API_KEY")
