@@ -5,17 +5,23 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain
 from mcqgenerator.logger import logging
+import secrets
 
 # load the env variables from .env file if available
-load_dotenv()
+# load_dotenv()
 
 # set the environment variable
-ai21_api_key = os.getenv("AI21_API_KEY")
+# ai21_api_key = os.getenv("AI21_API_KEY")
 
-if not ai21_api_key:
-    raise ValueError("AI21_API_KEY environment variable is not set")
+# if not ai21_api_key:
+#     raise ValueError("AI21_API_KEY environment variable is not set")
 
-os.environ["AI21_API_KEY"] = ai21_api_key  # set the env var explicitly
+# os.environ["AI21_API_KEY"] = ai21_api_key  # set the env var explicitly
+
+os.environ["AI21_API_KEY"] = secrets.get_secret("AI21_API_KEY")
+print(secrets.get_secret("AI21_API_KEY"))
+if not os.getenv("AI21_API_KEY"):
+    raise ValueError("AI21_API_KEY environment variable is not set through secrets")
 
 # load the LLM
 llm = ChatAI21(model="jamba-instruct")
