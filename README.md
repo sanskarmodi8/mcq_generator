@@ -1,10 +1,12 @@
-# MCQ GENERATOR USING OPENAI AND LANGCHAIN
+# MCQ GENERATOR
 
 ## Overview
 
 The MCQ Generator is a Python project that automates the process of generating multiple-choice questions (MCQs) for educational purposes. It utilizes Generative AI technologies like Langchains to analyze input text and create relevant MCQs based on the given number of questions, level of difficulty, and the subject.
 
 Live app - [Click here](https://mcqs-generator.streamlit.app)
+
+![MCQ Image](https://imgs.search.brave.com/nSpZtY-jGvSVnq_koyNnFfCOOD7HS_R2F04SeshN5RU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ2/MDczODU3OS9waG90/by9idXNpbmVzc21h/bi10aWNrLW1hcmst/YW4tYXNzZXNzbWVu/dC1xdWVzdGlvbm5h/aXJlLWV2YWx1YXRp/b24tb25saW5lLXN1/cnZleS1vbmxpbmUt/ZXhhbS53ZWJwP2I9/MSZzPTE3MDY2N2Em/dz0wJms9MjAmYz1Z/RVY0ZmVEQ2ZWUk05/NG9KU2NnQkp5Sllm/Y2ZFQ2g3M3VYcVVU/UVB6dzljPQ)
 
 ## Installation
 
